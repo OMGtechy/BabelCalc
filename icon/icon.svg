@@ -18,24 +18,7 @@
    sodipodi:docname="icon.svg">
   <defs
      id="defs4" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="136.41521"
-     inkscape:cy="50.748997"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     inkscape:window-width="1536"
-     inkscape:window-height="801"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+  
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -54,7 +37,7 @@
      id="layer1"
      transform="translate(0,-974.40945)">
     <g
-       transform="translate(-63.667186,745.46632)"
+       transform="matrix(0.51179214,0,0,0.51179214,-10.679133,875.61494)"
        id="g1348">
       <path
          style="fill:#fb2a0b;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -79,13 +62,6 @@
          id="text1306"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccczzzcccccccsccscccscscccccccccscc" />
-      <ellipse
-         style="fill:none;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-         id="path4183"
-         cx="49.93158"
-         cy="253.87991"
-         rx="0.375"
-         ry="1" />
     </g>
   </g>
 </svg>

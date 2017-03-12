@@ -42,7 +42,7 @@ GUI::GUI(Calculator* calc, QWidget* parent)
 	QString styleSheet = QLatin1String(baseStyle.readAll());
 
 	//Append windows style
-#ifdef _WIN32
+#ifndef Q_OS_MAC
 	QFile winStyle(":/style/windowsstyle.qss");
 	winStyle.open(QFile::ReadOnly);
 	styleSheet += QLatin1String(winStyle.readAll());
@@ -60,7 +60,10 @@ GUI::GUI(Calculator* calc, QWidget* parent)
 
 	//setWindowFlags(Qt::Widget | Qt::FramelessWindowHint); //commented: (makes window transparent on windows)
 	//setAttribute(Qt::WA_NoSystemBackground, true);
+
+#ifdef Q_OS_MAC
 	setAttribute( Qt::WA_TranslucentBackground );
+#endif
 
 	int rowCount = 0;
 
@@ -286,8 +289,8 @@ GUI::GUI(Calculator* calc, QWidget* parent)
 		gridLayout->addWidget(createButton<ModulusOperator>			(tr("mod")), row, col++);
 		gridLayout->addWidget(createButton							(tr("("), [=] {calculator->inputOpenBracket();}), row, col++);
 		gridLayout->addWidget(createButton							(tr(")"), [=] {calculator->inputCloseBracket();}), row, col++);
-		gridLayout->addWidget(createButton							(tr("x²"), [=] {}), row, col++);
-		gridLayout->addWidget(createButton							(tr("xⁿ"), [=] {}), row, col++);
+		gridLayout->addWidget(createButton<SquaredOperator>			(tr("x²")), row, col++);
+		gridLayout->addWidget(createButton<PowerOperator>			(tr("xⁿ")), row, col++);
 		gridLayout->addWidget(createButton<ASinOperator>			(tr("sin⁻¹")), row++, col++);
 
 		col = 5;
